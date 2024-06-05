@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  run_notebook:
+    image: tutorial_img
+    volumes:
+      - ./notebooks:/notebooks
+    working_dir: /notebooks/
+    env_file: .env
+  run_example:
+    image: tutorial_img
+    volumes:
+      - ./notebooks:/notebooks
+      - ./example:/example
+    working_dir: /example/
+    command: ./run_example.sh
+    env_file: .env
+
+
