@@ -15,7 +15,8 @@ def binarySearch(array, x, low, high):
 
 
 array = [3, 4, 5, 6, 7, 8, 9]
-x = 4
+x = 6
+
 result = binarySearch(array, x, 0, len(array) - 1)
 
 if result != -1:
